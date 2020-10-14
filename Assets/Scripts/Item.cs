@@ -1,18 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
 using UnityEngine;
 
-public class Test2 : MonoBehaviour
+public class Item : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float rotateSpeed;
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(new Vector3(0, rotateSpeed, 0) * Time.deltaTime);
     }
 }
