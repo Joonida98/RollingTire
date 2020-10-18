@@ -1,52 +1,66 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net.Sockets;
+using TreeEditor;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    Rigidbody rb;
-    bool isJump;
-    public float jumpPower;
+    private CharacterController controller;
+    private Vector3 direction;
+    public float forwardSpeed;
 
-    public int itemCount;
+    private int gameLane = 1; //0:left 1:middle 2:right
+    public float laneDistance = 4; // 이동가능한 레인의 폭
 
-    private void Awake()
+    void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        isJump = false;
-
+        controller = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump")&& !isJump)
+        direction.z = forwardSpeed;
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            isJump = true;
-            rb.AddForce(new Vector3(0, jumpPower, 0), ForceMode.Impulse);
-        }   
-    }
-
-    void FixedUpdate()
-    {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-
-        rb.AddForce(new Vector3(h, 0, v), ForceMode.Impulse);
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name == "Floor")
-            isJump = false;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "item")
-        {
-            itemCount++;
-            other.gameObject.SetActive(false);
+            gameLane++;
+            if (gameLane == 3)
+            {
+                gameLane = 2;
+            }
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            gameLane--;
+            if (gameLane == -1)
+            {
+                gameLane = 0;
+            }
+        }
+
+        Vector3 targetPosition = (transform.position.z * transform.forward) + (transform.position.y * transform.up);
+
+        if (gameLane == 0)
+        {
+            targetPosition += Vector3.left * laneDistance;
+        }else if(gameLane == 2)
+        {
+            targetPosition += Vector3.right * laneDistance;
+        }
+
+        transform.position = targetPosition;
+        // Vector3.Lerp(transform.position, targetPosition, 30 * Time.deltaTime); >> 적용 시 이상한 진동이 발생
+
+
+
     }
+
+    private void FixedUpdate()
+    {
+        controller.Move(direction * Time.fixedDeltaTime);
+    }
+
 }
