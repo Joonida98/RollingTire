@@ -5,37 +5,43 @@ using UnityEngine;
 public class TileManager : MonoBehaviour
 {
     public GameObject[] tilePrefabs;
+    public float spawnZ = 0.0f;
+    public float tileLength = 30; // 타일 크기
+    public int numberOfTiles = 5; //새로 생기는 타일의 개수
+    private List<GameObject> activeTiles = new List<GameObject>();
 
-    private Transform PlayerTransform;
-    private float spawnZ = 0.0f;
-    private float tileLength = 10.0f; // 타일 크기
-    private int amnTilesOnScreen = 3; //새로 생기는 타일의 개수
-    // Start is called before the first frame update
-    private void Start()
+    public Transform playerTransform;
+    void Start()
     {
-        PlayerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-       
-        for(int i =0; i < amnTilesOnScreen; i++)
+
+        for(int i =0; i < numberOfTiles; i++)
         {
-            SpawnTile();
+            if (i == 0)
+                SpawnTile(0);
+            else
+                SpawnTile(Random.Range(0, tilePrefabs.Length));
         }
     }
 
     // Update is called once per frame
-    private void Update()
+    void Update()
     {
-        if(PlayerTransform.position.z > (spawnZ - amnTilesOnScreen * tileLength))
+      if(playerTransform.position.z -35 > spawnZ - (numberOfTiles * tileLength)) 
         {
-            SpawnTile();
+            SpawnTile(Random.Range(0, tilePrefabs.Length));
+            DeleteTile();
         }
     }
 
-    private void SpawnTile(int prefabIndex = -1)
+    public void SpawnTile(int tileIndex)
     {
-        GameObject go;
-        go = Instantiate(tilePrefabs[0]) as GameObject;
-        go.transform.SetParent(transform);
-        go.transform.position = Vector3.forward * spawnZ;
+        GameObject go = Instantiate(tilePrefabs[tileIndex], transform.forward * spawnZ, transform.rotation);
+        activeTiles.Add(go);
         spawnZ += tileLength;
+    }
+    private void DeleteTile()
+    {
+        Destroy(activeTiles[0]);
+        activeTiles.RemoveAt(0);
     }
 }
