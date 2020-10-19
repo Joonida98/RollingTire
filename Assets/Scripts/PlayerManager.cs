@@ -11,6 +11,7 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         gameOver = false;
+        Time.timeScale = 1;  // 리플레이시 출발
     }
 
     
