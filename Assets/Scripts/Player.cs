@@ -51,10 +51,9 @@ public class Player : MonoBehaviour
             targetPosition += Vector3.right * laneDistance;
         }
 
-        transform.position = targetPosition;
-        // Vector3.Lerp(transform.position, targetPosition, 30 * Time.deltaTime); >> 적용 시 이상한 진동이 발생
-
-
+        transform.position = Vector3.Lerp(transform.position, targetPosition, 30 * Time.deltaTime);
+        controller.center = controller.center;
+     
 
     }
 
@@ -63,4 +62,11 @@ public class Player : MonoBehaviour
         controller.Move(direction * Time.fixedDeltaTime);
     }
 
+    public void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.transform.tag =="Obstacle")
+        {
+            PlayerManager.gameOver = true;
+        }
+    }
 }

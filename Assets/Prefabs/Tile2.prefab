@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2519820528320064174}
   m_Layer: 0
   m_Name: Cone2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 2519820529582472589}
   m_Layer: 0
   m_Name: Cone1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
