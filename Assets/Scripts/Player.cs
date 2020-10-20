@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     public Transform groundCheck;
 
     public float jumpForce;
-    public float Gravity = -20;
+    public float Gravity = 0;
 
     private int gameLane = 1; //0:left 1:middle 2:right
     public float laneDistance = 4; // 이동가능한 레인의 폭
@@ -30,16 +30,17 @@ public class Player : MonoBehaviour
     {
         direction.z = forwardSpeed;
 
-        isGround = Physics.CheckSphere(groundCheck.position, 0.15f, groundLayer);
+        bool isGround = Physics.CheckSphere(groundCheck.position, 0.3f, groundLayer);
+
         if (isGround)
         {
-            direction.y = -2;
-            if (SwipeManager.swipeUp)
+           direction.y = 0;
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 Jump();
             }
             else
-                direction.y += Gravity * Time.deltaTime;
+                direction.y +=  Gravity * Time.deltaTime;
         }
 
         if (SwipeManager.swipeRight)

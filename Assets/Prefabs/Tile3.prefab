@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 774541812499467945}
   - component: {fileID: 774541812499467944}
   - component: {fileID: 774541812499467943}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cone3
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 774541813201663178}
   - component: {fileID: 774541813201663177}
   - component: {fileID: 774541813201663176}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
