@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     private int gameLane = 1; //0:left 1:middle 2:right
     public float laneDistance = 4; // 이동가능한 레인의 폭
 
+    public Animator animatior;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -28,10 +30,14 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (!PlayerManager.TapToStat)
+            return;
+
+        animatior.SetBool("TapToStart", true);
         direction.z = forwardSpeed;
 
         isGround = Physics.CheckSphere(groundCheck.position, 0.3f, groundLayer);
-
+        animatior.SetBool("isGrounded", isGround);
         if (isGround)
         {
            direction.y = 0;
@@ -89,5 +95,10 @@ public class Player : MonoBehaviour
         {
             PlayerManager.gameOver = true;
         }
+    }
+    private void FixedUpdate()
+    {
+        if (!PlayerManager.TapToStat)
+            return;
     }
 }

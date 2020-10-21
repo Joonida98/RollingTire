@@ -8,10 +8,13 @@ public class PlayerManager : MonoBehaviour
     public static bool gameOver;
     public GameObject gameOverPanel;
 
+    public static bool TapToStat; //터치 후 게임 시작
+    public GameObject StartText; // 터치 후 글씨 제거
     void Start()
     {
         gameOver = false;
-        Time.timeScale = 1;  // 리플레이시 출발
+        Time.timeScale = 1;  // 리플레이 후 다시 출발
+        TapToStat = false;
     }
 
     
@@ -22,6 +25,11 @@ public class PlayerManager : MonoBehaviour
             Time.timeScale = 0;
             gameOverPanel.SetActive(true);
           
+        }
+        if(SwipeManager.tap)
+        {
+            TapToStat = true;
+            Destroy(StartText);
         }
     }
 }
