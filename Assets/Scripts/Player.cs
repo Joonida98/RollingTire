@@ -15,8 +15,8 @@ public class Player : MonoBehaviour
     public LayerMask groundLayer;
     public Transform groundCheck;
 
-    public float jumpForce;
-    public float Gravity = 0;
+    public float jumpForce = 12;
+    public float gravity = -10;
 
     private int gameLane = 1; //0:left 1:middle 2:right
     public float laneDistance = 4; // 이동가능한 레인의 폭
@@ -30,18 +30,21 @@ public class Player : MonoBehaviour
     {
         direction.z = forwardSpeed;
 
-        bool isGround = Physics.CheckSphere(groundCheck.position, 0.3f, groundLayer);
+        isGround = Physics.CheckSphere(groundCheck.position, 0.3f, groundLayer);
 
         if (isGround)
         {
            direction.y = 0;
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (SwipeManager.swipeUp)
             {
-                Jump();
+                direction.y = jumpForce;
             }
-            else
-                direction.y +=  Gravity * Time.deltaTime;
         }
+        else
+        {
+            direction.y += gravity * Time.deltaTime;
+        }
+
 
         if (SwipeManager.swipeRight)
         {
@@ -73,20 +76,13 @@ public class Player : MonoBehaviour
 
         transform.position = Vector3.Lerp(transform.position, targetPosition, 30 * Time.deltaTime);
         controller.center = controller.center;
-     
+
+        controller.Move(direction * Time.deltaTime);
 
     }
 
-    void Jump()
-    {
-        direction.y = jumpForce;
-    }
-
-    private void FixedUpdate()
-    {
-        controller.Move(direction * Time.fixedDeltaTime);
-    }
-
+    
+   
     public void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.transform.tag =="Obstacle")

@@ -1120,8 +1120,8 @@ GameObject:
   - component: {fileID: 1426156502}
   - component: {fileID: 1426156501}
   - component: {fileID: 1426156500}
-  - component: {fileID: 1426156504}
   - component: {fileID: 1426156505}
+  - component: {fileID: 1426156504}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1216,14 +1216,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 129be903362f00f4ab443e4394616744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 20
+  forwardSpeed: 10
   isGround: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
   groundCheck: {fileID: 1967023995}
-  jumpForce: 20
-  Gravity: 0
+  jumpForce: 10
+  gravity: -10
   laneDistance: 4
 --- !u!143 &1426156505
 CharacterController:
@@ -1388,7 +1388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1967023994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.541, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1426156503}
