@@ -1339,14 +1339,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 129be903362f00f4ab443e4394616744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 10
+  forwardSpeed: 20
   isGround: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
   groundCheck: {fileID: 1967023995}
   jumpForce: 10
-  gravity: -10
+  gravity: -15
   laneDistance: 4
   animatior: {fileID: 1040863425}
 --- !u!143 &1426156505
