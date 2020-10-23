@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     public float laneDistance = 4; // 이동가능한 레인의 폭
 
     public Animator animatior;
+    private bool isSliding = false;
 
     void Start()
     {
@@ -49,13 +50,19 @@ public class Player : MonoBehaviour
            direction.y = 0;
             if (SwipeManager.swipeUp)
             {
+                FindObjectOfType<AudioManager>().PlaySound("Jump");
                 direction.y = jumpForce;
             }
         }
         else
-        {
             direction.y += gravity * Time.deltaTime;
+        
+        
+        if (SwipeManager.swipeDown && !isSliding)
+        {
+            StartCoroutine(Slide());
         }
+
 
         controller.Move(direction * Time.deltaTime);
 
@@ -101,11 +108,26 @@ public class Player : MonoBehaviour
         if (hit.transform.tag =="Obstacle")
         {
             PlayerManager.gameOver = true;
+            FindObjectOfType<AudioManager>().PlaySound("GameOver");
         }
     }
     private void FixedUpdate()
     {
         if (!PlayerManager.TapToStat)
             return;
+    }
+    private IEnumerator Slide()
+    {
+        isSliding = true;
+        animatior.SetBool("isSliding", true);             
+        controller.center = new Vector3(0, -0.5f, 0);   
+        controller.height = 1;
+
+        yield return new WaitForSeconds(0.8f); //슬라이드 시간
+
+        controller.center = new Vector3(0, 0, 0);
+        controller.height = 0;
+        animatior.SetBool("isSliding", false);
+        isSliding = false;
     }
 }
