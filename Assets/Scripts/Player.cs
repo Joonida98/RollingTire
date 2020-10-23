@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private CharacterController controller;
     private Vector3 direction;
     public float forwardSpeed;
+    public float maxSpeed;
 
     public bool isGround;
     public LayerMask groundLayer;
@@ -33,6 +34,11 @@ public class Player : MonoBehaviour
         if (!PlayerManager.TapToStat)
             return;
 
+        if (forwardSpeed < maxSpeed)  //속도증가
+        {
+            forwardSpeed += 0.1f * Time.deltaTime;
+        }
+
         animatior.SetBool("TapToStart", true);
         direction.z = forwardSpeed;
 
@@ -51,6 +57,7 @@ public class Player : MonoBehaviour
             direction.y += gravity * Time.deltaTime;
         }
 
+        controller.Move(direction * Time.deltaTime);
 
         if (SwipeManager.swipeRight)
         {
@@ -83,7 +90,7 @@ public class Player : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, targetPosition, 30 * Time.deltaTime);
         controller.center = controller.center;
 
-        controller.Move(direction * Time.deltaTime);
+        
 
     }
 
