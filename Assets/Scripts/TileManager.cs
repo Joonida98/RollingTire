@@ -7,7 +7,7 @@ public class TileManager : MonoBehaviour
     public GameObject[] tilePrefabs;
     public float spawnZ = 0.0f;
     public float tileLength = 30; // 타일 크기
-    public int numberOfTiles = 5; //새로 생기는 타일의 개수
+    public int numberOfTiles = 7; //새로 생기는 타일의 개수
     private List<GameObject> activeTiles = new List<GameObject>();
 
     public Transform playerTransform;
