@@ -61,6 +61,8 @@ public class Player : MonoBehaviour
         if (SwipeManager.swipeDown && !isSliding)
         {
             StartCoroutine(Slide());
+            FindObjectOfType<AudioManager>().PlaySound("Slide");
+
         }
 
 
