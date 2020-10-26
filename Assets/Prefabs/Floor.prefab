@@ -1,6 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< Updated upstream:Assets/Prefabs/Floor.prefab
 --- !u!1 &6330286198804798382
+=======
+--- !u!1 &1887358533061528148
+>>>>>>> Stashed changes:Assets/Prefabs/Tile11.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +12,17 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Floor.prefab
   - component: {fileID: 6330286198804798381}
   - component: {fileID: 6330286198804798378}
   - component: {fileID: 6330286198804798379}
   - component: {fileID: 6330286198804798380}
+=======
+  - component: {fileID: 1887358533061528151}
+  - component: {fileID: 1887358533061528144}
+  - component: {fileID: 1887358533061528145}
+  - component: {fileID: 1887358533061528150}
+>>>>>>> Stashed changes:Assets/Prefabs/Tile11.prefab
   m_Layer: 8
   m_Name: Floor
   m_TagString: Untagged
@@ -19,13 +30,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Floor.prefab
 --- !u!4 &6330286198804798381
+=======
+--- !u!4 &1887358533061528151
+>>>>>>> Stashed changes:Assets/Prefabs/Tile11.prefab
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Floor.prefab
   m_GameObject: {fileID: 6330286198804798382}
+=======
+  m_GameObject: {fileID: 1887358533061528148}
+>>>>>>> Stashed changes:Assets/Prefabs/Tile11.prefab
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 3}
@@ -33,21 +52,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Floor.prefab
 --- !u!33 &6330286198804798378
+=======
+--- !u!33 &1887358533061528144
+>>>>>>> Stashed changes:Assets/Prefabs/Tile11.prefab
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Floor.prefab
   m_GameObject: {fileID: 6330286198804798382}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &6330286198804798379
+=======
+  m_GameObject: {fileID: 1887358533061528148}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1887358533061528145
+>>>>>>> Stashed changes:Assets/Prefabs/Tile11.prefab
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Floor.prefab
   m_GameObject: {fileID: 6330286198804798382}
+=======
+  m_GameObject: {fileID: 1887358533061528148}
+>>>>>>> Stashed changes:Assets/Prefabs/Tile11.prefab
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -59,7 +92,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< Updated upstream:Assets/Prefabs/Floor.prefab
   - {fileID: 2100000, guid: 317128cd0d0753f47968fd619c3c8da5, type: 2}
+=======
+  - {fileID: 2100000, guid: 3946b8fe2b5764b4f953ac6e5b4222f4, type: 2}
+>>>>>>> Stashed changes:Assets/Prefabs/Tile11.prefab
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -80,13 +117,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Floor.prefab
 --- !u!65 &6330286198804798380
+=======
+--- !u!65 &1887358533061528150
+>>>>>>> Stashed changes:Assets/Prefabs/Tile11.prefab
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Floor.prefab
   m_GameObject: {fileID: 6330286198804798382}
+=======
+  m_GameObject: {fileID: 1887358533061528148}
+>>>>>>> Stashed changes:Assets/Prefabs/Tile11.prefab
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1

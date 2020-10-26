@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9bc3b0602bf6dff4ca0f618ba258adc4
+guid: 9111f6b554f2a0349b9d0ebb1ddd9fa6
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,60 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-<<<<<<< Updated upstream
-      name: Napkin
-    second: {fileID: 2100000, guid: e968a81f2353ae643a48acccc2bcbc17, type: 2}
-=======
-      name: 01 - Default
-    second: {fileID: 2100000, guid: c1991b3e340e54b4d973a4d8b887ad6b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 03 - Default
-    second: {fileID: 2100000, guid: d85b0228708e1b14abc2d37d5809030f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 11 - Default
-    second: {fileID: 2100000, guid: b83bfe7805b172b4bab90e0c8dd4e44a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 13 - Default
-    second: {fileID: 2100000, guid: 5c4d2e87666c6cb4ebb22ac852ca920a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Napkin
-    second: {fileID: 2100000, guid: 465cfa9c90a626540a8cbc775cb54ed3, type: 2}
->>>>>>> Stashed changes
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: cloth
-<<<<<<< Updated upstream
-    second: {fileID: 2100000, guid: 8cfe208bdd81aa84c947057ee1979d19, type: 2}
-=======
-    second: {fileID: 2100000, guid: f28c717bbcf15d14b8a0190dfff030b8, type: 2}
->>>>>>> Stashed changes
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pants
-<<<<<<< Updated upstream
-    second: {fileID: 2100000, guid: 465cfa9c90a626540a8cbc775cb54ed3, type: 2}
-=======
-    second: {fileID: 2100000, guid: ddd927969ee203a429d3c961e6401168, type: 2}
->>>>>>> Stashed changes
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: socks
-<<<<<<< Updated upstream
-    second: {fileID: 2100000, guid: 8c452d7b997c2d342a78bdb164762eb0, type: 2}
-=======
-    second: {fileID: 2100000, guid: 04bd797ae09430345852240f5aba45ca, type: 2}
->>>>>>> Stashed changes
+      name: 02 - Default
+    second: {fileID: 2100000, guid: 5952869aeb024c4438d08f3a65e0ccd8, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
