@@ -5,7 +5,7 @@ public class Events : MonoBehaviour
 {
     public void ReplayGame()
     {
-        SceneManager.LoadScene("SampleScene"); //이동할 씬
+        SceneManager.LoadScene("Level 1"); //이동할 씬
     }
 
     public void QuitGame()
