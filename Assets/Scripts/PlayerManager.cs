@@ -14,6 +14,10 @@ public class PlayerManager : MonoBehaviour
 
     public static int numberOfCoin;
     public Text countCoins;
+
+    public GameObject pausePanel;
+
+    public static bool isPause = false; // 메뉴가 호출되면 true;
     void Start()
     {
         gameOver = false;
@@ -22,7 +26,6 @@ public class PlayerManager : MonoBehaviour
         numberOfCoin = 0;
     }
 
-    
     void Update()
     {
         if (gameOver)
@@ -41,4 +44,19 @@ public class PlayerManager : MonoBehaviour
             Destroy(StartText);
         }
     }
+    public void PauseGame()
+    {
+        pausePanel.SetActive(true);
+        Time.timeScale = 0f;
+        isPause = true;
+    }
+    public void ResumeGame()
+    {
+        pausePanel.SetActive(false);
+        Time.timeScale = 1f;
+        isPause = false;
+
+
+    }
+
 }
