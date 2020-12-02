@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TileManager : MonoBehaviour
+public class TileManager2 : MonoBehaviour
 {
     public GameObject[] tilePrefabs;
     public float spawnZ = 0.0f;
     public float tileLength = 30; // 타일 크기
     public int numberOfTiles = 7; //새로 생기는 타일의 개수
     private List<GameObject> activeTiles = new List<GameObject>();
-    public float DestroyTime = 5.0f; // * 값이 100이면 Z축 2160까지 타일을 생성함 
+    
 
-  
 
-    public Transform playerTransform;
+
+    public Transform pt;
     void Start()
     {
-        Destroy(gameObject, DestroyTime);
+       
 
-        for (int i =0; i < numberOfTiles; i++)
+        for (int i = 0; i < numberOfTiles; i++)
         {
             if (i == 0)
                 SpawnTile(0);
@@ -30,7 +30,7 @@ public class TileManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if(playerTransform.position.z -35 > spawnZ - (numberOfTiles * tileLength)) 
+        if (pt.position.z - 35 > spawnZ - (numberOfTiles * tileLength))
         {
             SpawnTile(Random.Range(0, tilePrefabs.Length));
             DeleteTile();
