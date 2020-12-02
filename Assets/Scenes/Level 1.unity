@@ -403,6 +403,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefabs:
   - {fileID: 8367590998510792851, guid: 363ebea0b08791249899071c0a5cec83, type: 3}
+  - {fileID: 2519820528529930141, guid: 557601dcc122b8942a74a27e92495371, type: 3}
+  - {fileID: 774541813168562623, guid: 0778f93293ad3764e9c927b71d3b7b66, type: 3}
+  - {fileID: 1678100672728171937, guid: d997271866810414eb7f7e09dfe84ef9, type: 3}
+  - {fileID: 6337157393094741161, guid: 6587b42925091cd45b2856c86ec0ff12, type: 3}
+  - {fileID: 6337157393094741161, guid: de36d4ba6c515044da5c0549453f7a0a, type: 3}
+  - {fileID: 6337157393094741161, guid: 7095bd250188716429f6c43ae85e79cd, type: 3}
   spawnZ: 0
   tileLength: 30
   numberOfTiles: 7
