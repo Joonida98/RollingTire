@@ -10,6 +10,7 @@ public class GPGSManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("start");
         PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()      
         .RequestEmail()
         // requests a server auth code be generated so it can be passed to an
@@ -33,7 +34,7 @@ public class GPGSManager : MonoBehaviour
     {
         if (Social.localUser.authenticated)
         {
-            Debug.Log("이미 로그인된 유저");
+            Debug.Log("Login Success");
         }
         else
         {
@@ -41,13 +42,39 @@ public class GPGSManager : MonoBehaviour
                 {
                     if (success)
                     {
-                        Debug.Log("로그인 성공");
+                        Debug.Log("success");
                     }
                     else
                     {
-                        Debug.Log("로그인 실패");
+                        Debug.Log("fail");
                     }
                 });
         }
     }
+
+    //리더보드 버튼
+    public void ShowLeaderboard()
+    {
+        Debug.Log("ShowLeaderboard");
+    }
+
+    public void ShowAchievement()
+    {
+        Debug.Log("ShowAchievement");
+    }
+
+    public void AddAchievement()
+    {
+        Debug.Log("AddAchievement");
+    }
+
+    public void AddScore()
+    {
+        Debug.Log("AddScore");
+    }
+
+
+
+
+
 }
