@@ -107,6 +107,7 @@ public class Player : MonoBehaviour
         {
             PlayerManager.gameOver = true;
             FindObjectOfType<AudioManager>().PlaySound("GameOver");
+            GameObject.Find("Player").SendMessage("Finish");
         }
     }
     private void FixedUpdate()

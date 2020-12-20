@@ -14,6 +14,7 @@ public class PlayerManager : MonoBehaviour
 
     public static int numberOfCoin;
     public Text countCoins;
+    public Text secondcountCoins;
 
     public GameObject pausePanel;
 
@@ -36,9 +37,10 @@ public class PlayerManager : MonoBehaviour
         }
 
         countCoins.text = "Coins: " + numberOfCoin;
+        secondcountCoins.text = "Coins: " + numberOfCoin;
 
 
-        if(SwipeManager.tap)
+        if (SwipeManager.tap)
         {
             TapToStat = true;
             Destroy(StartText);
