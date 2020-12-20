@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -402,15 +402,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePrefabs:
-  - {fileID: 774541813168562623, guid: 931ce29d61ec9de4fbe1f764d3a00e27, type: 3}
-  - {fileID: 774541813168562623, guid: 14512713e97fb5a4bba80e66653f740e, type: 3}
-  - {fileID: 774541813168562623, guid: 744cb33843e5f5644bcead6f1764cd75, type: 3}
-  - {fileID: 774541813168562623, guid: 85ccdc23c33d76943831b1361f48e9f8, type: 3}
-  - {fileID: 774541813168562623, guid: dd0d87e87b695324c8cc1bbb774d690b, type: 3}
-  - {fileID: 774541813168562623, guid: 23925608b24a1c3468f9da1e32411ecc, type: 3}
+  - {fileID: 774541813168562623, guid: d5ab0fb10154051419b987f6d6b3851b, type: 3}
+  - {fileID: 774541813168562623, guid: b509e554f9afa4043bca33b59a7def74, type: 3}
+  - {fileID: 774541813168562623, guid: 83355302b9f0e2943ace97343fd04087, type: 3}
+  - {fileID: 774541813168562623, guid: 2c8ac7bd4b0724e4ca0fc97bd39d7edb, type: 3}
+  - {fileID: 774541813168562623, guid: 938059ae1869f874aa6d6d2392eab4b2, type: 3}
+  - {fileID: 774541813168562623, guid: ada81f8457dd157489bdc51412efb2b8, type: 3}
+  - {fileID: 774541813168562623, guid: e99eda124ac4cc54298c6617a7b9a22a, type: 3}
   spawnZ: 0
   tileLength: 30
   numberOfTiles: 7
+  DestroyTime: 5
   playerTransform: {fileID: 1426156503}
 --- !u!4 &295265343
 Transform:
@@ -659,7 +661,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30

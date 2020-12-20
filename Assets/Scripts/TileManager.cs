@@ -9,7 +9,7 @@ public class TileManager : MonoBehaviour
     public float tileLength = 30; // 타일 크기
     public int numberOfTiles = 7; //새로 생기는 타일의 개수
     private List<GameObject> activeTiles = new List<GameObject>();
-    public float DestroyTime = 5.0f; // * 값이 100이면 Z축 2160까지 타일을 생성함 
+    public float DestroyTime ; // * 값이 80이면 Z축 1680까지 타일을 생성함 
 
   
 

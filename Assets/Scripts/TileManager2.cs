@@ -9,14 +9,15 @@ public class TileManager2 : MonoBehaviour
     public float tileLength = 30; // 타일 크기
     public int numberOfTiles = 7; //새로 생기는 타일의 개수
     private List<GameObject> activeTiles = new List<GameObject>();
-    
+    public float DestroyTime; // * 값이 80이면 Z축 1680까지 타일을 생성함 
 
 
 
-    public Transform pt;
+
+    public Transform playerTransform;
     void Start()
     {
-       
+        Destroy(gameObject, DestroyTime);
 
         for (int i = 0; i < numberOfTiles; i++)
         {
@@ -30,7 +31,7 @@ public class TileManager2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pt.position.z - 35 > spawnZ - (numberOfTiles * tileLength))
+        if (playerTransform.position.z - 35 > spawnZ - (numberOfTiles * tileLength))
         {
             SpawnTile(Random.Range(0, tilePrefabs.Length));
             DeleteTile();
